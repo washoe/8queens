@@ -5,11 +5,6 @@
       initialize: function() {
         this.$template = _.template(unescape(template_html));
         console.log('init stats model');
-        return this.listenTo(this.model, 'change', this.render);
-      },
-      render: function(model) {
-        console.log('stadt render');
-        return this.$el.html(this.$template(model.toJSON()));
       }
     });
   });
